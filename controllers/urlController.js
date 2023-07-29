@@ -24,7 +24,7 @@ const urlController = {
         );
       }
 
-      const shortUrl = `http://localhost:3001/short/${randomString}`;
+      const shortUrl = `https://merry-pixie-65f0af.netlify.app/short/${randomString}`;
 
       const url = new urlModel({
         longURL,

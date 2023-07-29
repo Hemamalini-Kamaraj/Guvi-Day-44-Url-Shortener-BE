@@ -64,7 +64,7 @@ const userController = {
         Math.random().toString(36).substring(2, 15) +
         Math.random().toString(36).substring(2, 15);
 
-      const accVerificationLink = `http://localhost:3000/users/acc-verification/${randomString}`;
+      const accVerificationLink = `https://merry-pixie-65f0af.netlify.app/users/acc-verification/${randomString}`;
 
       // check if the password is correct
       const hasedPassword = await bcrypt.hash(password, 10);
@@ -155,7 +155,7 @@ const userController = {
         Math.random().toString(36).substring(2, 15) +
         Math.random().toString(36).substring(2, 15);
 
-      const link = `http://localhost:3000/users/reset-password/${randomString}`;
+      const link = `https://merry-pixie-65f0af.netlify.app/users/reset-password/${randomString}`;
 
       user.resetToken = randomString;
       const updateUser = await userModel.findByIdAndUpdate(user.id, user);
@@ -227,7 +227,7 @@ const userController = {
   getUserDashboard: async (req, res) => {
     try {
       const userId = req.userId;
-      console.log(userId)
+      console.log(userId);
       const user = await userModel.findById(userId, "name email");
       res.json(user);
     } catch (error) {
