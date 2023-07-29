@@ -24,7 +24,7 @@ const urlController = {
         );
       }
 
-      const shortUrl = `https://merry-pixie-65f0af.netlify.app/short/${randomString}`;
+      const shortUrl = `https://url-shortener-0973.onrender.com/short/${randomString}`;
 
       const url = new urlModel({
         longURL,
